@@ -108,7 +108,7 @@ def hor(A,m=None,n=None,p=1):
 def corner(A):
     for i in range(1,len(A)):
         for j in range(len(A[i])-1):
-            if A[i-1][j]==1 and A[i-1][j+1]==1 and A[i][j+1]==1:
+            if A[i-1][j]==1 and A[i-1][j+1]==1 and A[i][j+1]==1 and A[i][j]==0:
                 A[i][j]="D"
     return A
 
@@ -128,49 +128,11 @@ def compare(A,B):
         return True
     return False
 
-'''
-A = CreateHospital(createMatrix(10,10),10,10)
-disp(A)
-A = corner(A)
-print()
-disp(A)
-'''
-'''
-A = createMatrix(11,9)
-A = segment(A,5,5,1)
-disp(A)
-#A = ver(A)
-A = hor(A)
-print()
-disp(A)
-'''
-'''
-disp(A)
-print()
-A = ver(A,10,10,1)
-disp(A)
-print()
-A = HF(A,10,5,1)
-disp(A)
-'''
+
 s = 20
-disp(CreateHospital(createMatrix(s,s),s,s))
+temp = CreateHospital(createMatrix(s,s),s,s)
+disp(temp)
+print(temp)
 
 
-'''
-a = 20
-A = createMatrix(a,a)
-#disp(segment(A,0,0,4,4))
-A = CreateHospital(A,a,a)
-disp(A)
-
-print()
-
-b = 20
-B = createMatrix(b,b)
-B = CreateHospital(B,b,b)
-disp(B)
-
-compare(A,B)
-'''
 
